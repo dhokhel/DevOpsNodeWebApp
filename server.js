@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello FS2025 DevOps Course! Neu ist der Cloud Deploy auf Render.com. Das ist ein Test!');
+  res.send('Hello FS2025 DevOps Course! Test Run über GitHub Action!');
 });
 
 app.listen(PORT, HOST);
