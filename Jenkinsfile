@@ -7,7 +7,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'DockerHub-dhokhkel-DevOps', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
-                            export DOCKER_HOST=tcp://host.docker.internal:2375
+                            export DOCKER_HOST=tcp://172.17.0.2:2375
                             docker login -u $USERNAME -p $PASSWORD
                             docker push dhokhkel/node-web-app
                         '''
